@@ -16,13 +16,16 @@ order(a) = "not sorted".
 
 "ascending", "descending" or "not sorted".
 """
+
+
 def order(a):
     if sorted(a) == a:
         return "ascending"
-    elif sorted(a,reverse=True) == a:
+    elif sorted(a, reverse=True) == a:
         return "descending"
     else:
         return "not sorted"
+
 
 print(order([6, 20, 160, 420]))
 print(order([10, 5, 4]))

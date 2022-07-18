@@ -30,6 +30,8 @@ Constraints:
 
 The number of points Nicky will receive in the binary representation.
 """
+
+
 def checkVisibleZeroes(N):
     points = 0
     for i in N:
@@ -58,6 +60,7 @@ def Cipher_Zeroes(N):
     zeroes = checkVisibleZeroes(N)
     points = companyBonus(zeroes)
     return decimalToBinary(points)
+
 
 print(Cipher_Zeroes("565"))
 print(Cipher_Zeroes("2628426728"))

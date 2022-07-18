@@ -9,6 +9,8 @@ Example
 [output] boolean
 
 """
+
+
 def isPalindrome(str):
     chars = [[chr(165 + i), 0] for i in range(180)]
     for c in str:

@@ -26,13 +26,16 @@ Chapter id (3 letters)
 [output] array.string
 
 A filtered array with verses from the given chapter in the given book of the Bible."""
-def filterBible(scripture,book,chapter):
+
+
+def filterBible(scripture, book, chapter):
     obj = book + chapter
     result = []
     for i in scripture:
         if obj in i[:5]:
             result.append(i)
     return result
+
 
 scripture = ["01001001",
              "01001002",
@@ -45,9 +48,7 @@ scripture = ["01001001",
              "66022021"]
 book = "01"
 chapter = "001"
-print(filterBible(scripture,
-                  book,
-                  chapter))
+print(filterBible(scripture, book, chapter))
 
 scripture = ["01001001",
              "01001002",
@@ -61,9 +62,7 @@ scripture = ["01001001",
 book = "01"
 chapter = "002"
 
-print(filterBible(scripture,
-                  book,
-                  chapter))
+print(filterBible(scripture, book, chapter))
 
 scripture = ["01001001",
              "01001002",
@@ -77,6 +76,4 @@ scripture = ["01001001",
 book = "02"
 chapter = "001"
 
-print(filterBible(scripture,
-                  book,
-                  chapter))
+print(filterBible(scripture, book, chapter))

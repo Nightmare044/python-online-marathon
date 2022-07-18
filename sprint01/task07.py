@@ -12,18 +12,20 @@ The number of hours he studied each day.
 
 The length of the maximum non-decreasing contiguous subarray.
 """
+
+
 def studying_hours(a):
     ans = 0
     max = 0
-    for i,j in enumerate(a):
-        if i+1 == len(a):
+    for i, j in enumerate(a):
+        if i + 1 == len(a):
             return max
-        elif j <= a[i+1]:
-              ans += 1
-              if max <= ans:
-                max = ans+1
+        elif j <= a[i + 1]:
+            ans += 1
+            if max <= ans:
+                max = ans + 1
         else:
-           ans = 0
+            ans = 0
 
 
 print(studying_hours([2, 2, 1, 3, 4, 1]))
@@ -31,8 +33,8 @@ print(studying_hours([2, 2, 9]))
 print(studying_hours([10, 100, 111, 1, 2]))
 
 print(studying_hours(
-  [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-   1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]))
+    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+     1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]))
 
 print(studying_hours(
     [1, 638, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000,

@@ -21,8 +21,11 @@ length of the permutations
 
 permutation r
 """
-def findPermutation(n,p,q):
-    return [j+1 for i in range(n) for j in range(n) if q[i] == p[j]]
+
+
+def findPermutation(n, p, q):
+    return [j + 1 for i in range(n) for j in range(n) if q[i] == p[j]]
+
 
 n = 5
 p = [3, 4, 1, 2, 5]
