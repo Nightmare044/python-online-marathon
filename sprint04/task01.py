@@ -16,12 +16,13 @@ class Employee:
         self.firstname = firstname
         self.lastname = lastname
         self.salary = int(salary)
-    #
-    # def from_string(self, value):
-    #     value.split("-")
-    #     self.firstname = value[0]
-    #     self.lastname = value[1]
-    #     self.salary = int(value[2])
+
+    @classmethod
+    def from_string(cls, value):
+        firstname, lastname, salary = value.split("-")
+        return cls(firstname, lastname, salary)
+
+
 
 
 emp1 = Employee("Mary", "Sue", 60000)
@@ -30,9 +31,24 @@ print(emp1.lastname)
 print(emp1.salary)
 print(isinstance(emp1.salary, int))
 
-#
-# emp2 = Employee.from_string("John-Smith-55000")
-# print(emp2.firstname)
-# print(emp2.lastname)
-# print(emp2.salary)
-# print(isinstance(emp2.salary, int))
+
+emp2 = Employee.from_string("John-Smith-55000")
+print(emp2.firstname)
+print(emp2.lastname)
+print(emp2.salary)
+print(isinstance(emp2.salary, int))
+
+emp3 = Employee.from_string("Susan-Walker-70000")
+print(emp3.firstname)
+print(emp3.lastname)
+print(emp3.salary)
+
+emp4 = Employee.from_string("Michael-Ferry-90000")
+print(emp4.firstname)
+print(emp4.lastname)
+print(emp4.salary)
+
+emp5 = Employee("Graham", "Derrell", 55000)
+print(emp5.firstname)
+print(emp5.lastname)
+print(emp5.salary)
