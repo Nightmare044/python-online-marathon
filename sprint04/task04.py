@@ -43,6 +43,8 @@ my_gallows.words ➞ ['apple', 'ear', 'rhino']
 my_gallows.restart() ➞ "game restarted"
 my_gallows.words ➞ []
 """
+
+
 class Gallows:
     def __init__(self):
         self.words = []
@@ -65,6 +67,7 @@ class Gallows:
         self.game_over = False
         return "game restarted"
 
+
 my_gallows = Gallows()
 print(my_gallows.game_over)
 print(my_gallows.play('apple'))
@@ -77,7 +80,6 @@ print(my_gallows.play('oops'))
 print(my_gallows.game_over)
 print(my_gallows.words)
 
-
 my_gallows = Gallows()
 print(my_gallows.restart())
 print(my_gallows.words)
@@ -87,7 +89,6 @@ print(my_gallows.game_over, False)
 print(my_gallows.play('stash'))
 print(my_gallows.play('hostess'))
 print(my_gallows.words)
-
 
 my_gallows = Gallows()
 print(my_gallows.game_over)
